@@ -5,29 +5,40 @@ import ProfilePic from '../../assets/profilePicMe.png';
 
 import { FaUserCircle } from "react-icons/fa";
 
-export default function Settings(){
-  return(
+export default function Settings() {
+  return (
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
-          <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
+          <span className="settingsTitleUpdate">Update Your Account</span>
+          <span className="settingsTitleDelete">Delete Account</span>
         </div>
         <form className="settingsForm">
           <label>Profile Picture</label>
-          <div className="settingsProfilePic">
-            <img src={ProfilePic} alt="profile picture" />
+          <div className="settingsPP">
+            <img
+              src={ProfilePic}
+              alt=""
+            />
             <label htmlFor="fileInput">
-              <FaUserCircle style={{ fontSize: "24px", cursor: "pointer" }} />
+              <FaUserCircle style={{ cursor: "pointer", fontSize: "24px" }} />
             </label>
-            <input type="file" id="fileInput" style={{ display: "none" }}/>
+            <input
+              id="fileInput"
+              type="file"
+              style={{ display: "none" }}
+              className="settingsPPInput"
+            />
           </div>
           <label>Username</label>
-          <input type="text" placeholder="Sarif" />
+          <input type="text" placeholder="Safak" name="name" />
           <label>Email</label>
-          <input type="email" placeholder="sarifwebdesign@gmail.com" />
+          <input type="email" placeholder="safak@gmail.com" name="email" />
           <label>Password</label>
-          <input type="password" />
+          <input type="password" placeholder="Password" name="password" />
+          <button className="settingsSubmitButton" type="submit">
+            Update
+          </button>
         </form>
       </div>
       <Sidebar />
