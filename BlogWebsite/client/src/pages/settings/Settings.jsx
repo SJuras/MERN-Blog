@@ -4,6 +4,7 @@ import Sidebar from '../../sidebar/Sidebar';
 import ProfilePic from '../../assets/profilePicMe.png';
 
 import { FaUserCircle } from "react-icons/fa";
+import { FaWindowClose } from "react-icons/fa";
 
 export default function Settings() {
   return (
@@ -11,7 +12,7 @@ export default function Settings() {
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsTitleUpdate">Update Your Account</span>
-          <span className="settingsTitleDelete">Delete Account</span>
+          <span className="settingsTitleDelete"><FaWindowClose style={{ marginBottom: "-2px" }} /> Delete Account</span>
         </div>
         <form className="settingsForm">
           <label>Profile Picture</label>
@@ -21,7 +22,7 @@ export default function Settings() {
               alt=""
             />
             <label htmlFor="fileInput">
-              <FaUserCircle style={{ cursor: "pointer", fontSize: "24px" }} />
+              <FaUserCircle style={{ cursor: "pointer", fontSize: "24px", color: "lightcoral" }} />
             </label>
             <input
               id="fileInput"
