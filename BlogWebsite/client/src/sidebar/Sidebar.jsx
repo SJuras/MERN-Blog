@@ -47,6 +47,7 @@ export default function Sidebar() {
           <FaPinterest style={{ fontSize: "20px", marginRight: "10px", color: "#444", cursor: "pointer" }} />
           <FaInstagram style={{ fontSize: "20px", marginRight: "10px", color: "#444", cursor: "pointer" }} />
         </div>
+        <span>Created by: Sarif-Design 2022</span>
       </div>
     </div>
   );
